@@ -4,6 +4,7 @@ const getState = ({ getStore, setStore }) => {
 			sessions: [
 				{
 					id: 1,
+					date: "12 / 15 / 19",
 					time: 4567,
 					magneticField: 456,
 					speed: 456,
@@ -12,6 +13,7 @@ const getState = ({ getStore, setStore }) => {
 				},
 				{
 					id: 2,
+					date: "12 / 15 / 19",
 					time: 44567,
 					magneticField: 123,
 					speed: 9876,
@@ -20,6 +22,7 @@ const getState = ({ getStore, setStore }) => {
 				},
 				{
 					id: 3,
+					date: "12 / 15 / 19",
 					time: 45367,
 					magneticField: 444,
 					speed: 446,
