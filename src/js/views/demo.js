@@ -9,36 +9,47 @@ export class Demo extends React.Component {
 	render() {
 		return (
 			<div className="container">
+				<h1>Status Page</h1>
+				<button type="button" className="btn btn-danger">
+					Retrieve data
+				</button>
 				<ul className="list-group">
-					<Context.Consumer>
-						{({ store, actions }) => {
-							return store.demo.map((item, index) => {
-								return (
-									<li
-										key={index}
-										className="list-group-item d-flex justify-content-between"
-										style={{ background: item.background }}>
-										<Link to={"/single/" + index}>
-											<span>Link to: {item.title}</span>
-										</Link>
-										<p style={{ color: item.initial }}>
-											{"Check store/store.js scroll to the actions to see the code "}
-										</p>
-										<button
-											className="btn btn-success"
-											onClick={() => actions.changeColor(index, "orange")}>
-											Change Color
-										</button>
-									</li>
-								);
-							});
-						}}
-					</Context.Consumer>
+					<table className="table table-dark">
+						<thead>
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">Time</th>
+								<th scope="col">Magnetic Fields</th>
+								<th scope="col">Speed</th>
+								<th scope="col">Temperature</th>
+								<th scope="col">Atmosphere Pressure</th>
+							</tr>
+						</thead>
+						<tbody>
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return store.sessions.map((item, index) => {
+										return (
+											<tr key={index}>
+												<td>{item.id}</td>
+												<td>{item.time}</td>
+												<td>{item.magneticField} tesla</td>
+												<td>{item.speed} fps</td>
+												<td>
+													{item.temperature}
+													{"\u2109"}
+													{/* escape charrachter for f degrees*/}
+												</td>
+												<td>{item.atmospherePressure} psi</td>
+											</tr>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</tbody>
+					</table>
 				</ul>
 				<br />
-				<Link to="/">
-					<button className="btn btn-primary">Back home</button>
-				</Link>
 			</div>
 		);
 	}

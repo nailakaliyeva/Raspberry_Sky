@@ -1,16 +1,30 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			demo: [
+			sessions: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
+					id: 1,
+					time: 4567,
+					magneticField: 456,
+					speed: 456,
+					temperature: 456,
+					atmospherePressure: 456
 				},
 				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
+					id: 2,
+					time: 44567,
+					magneticField: 123,
+					speed: 9876,
+					temperature: 123,
+					atmospherePressure: 4567
+				},
+				{
+					id: 3,
+					time: 45367,
+					magneticField: 444,
+					speed: 446,
+					temperature: 55,
+					atmospherePressure: 777
 				}
 			]
 		},
@@ -19,15 +33,15 @@ const getState = ({ getStore, setStore }) => {
 				//get the store
 				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
+				//we have to loop the entire sessions array to look for the respective index
 				//and change its color
-				const demo = store.demo.map((elm, i) => {
+				const session = store.sessions.map((elm, i) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
 
 				//reset the global store
-				setStore({ demo: demo });
+				setStore({ sessions: sessions });
 			}
 		}
 	};
