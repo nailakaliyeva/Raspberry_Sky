@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
 
-export class Demo extends React.Component {
+export class Profile extends React.Component {
 	render() {
 		return (
 			<div className="container">

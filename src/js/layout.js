@@ -1,12 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { Profile } from "./views/profile";
 import injectContext from "./store/appContext";
-
 import { Navbar } from "./component/navbar";
 
 //create your first component
@@ -22,8 +18,7 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Navbar />
 						<Switch>
-							<Route path="/" component={Demo} />
-							<Route exact path="/" component={Home} />
+							<Route path="/" component={Profile} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 					</ScrollToTop>
