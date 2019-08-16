@@ -23,7 +23,7 @@ export class Home extends React.Component {
 				<div className="embed-responsive embed-responsive-16by9">
 					<iframe
 						className="embed-responsive-item"
-						src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+						src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0z-ydcc"
 						allowFullScreen
 					/>
 				</div>
