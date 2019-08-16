@@ -8,6 +8,9 @@ export class Navbar extends React.Component {
 				<Link to="/home">
 					<a className="navbar-brand mb-0 h1">Raspberry Sky Home Page</a>
 				</Link>
+				<Link to="/subscribe">
+					<a className="navbar-brand mb-0 h1 mx-auto">Subscription Plans</a>
+				</Link>
 				<div className="ml-auto">
 					<Link to="/login">
 						<a className="navbar-brand mb-0 h1">Login</a>
