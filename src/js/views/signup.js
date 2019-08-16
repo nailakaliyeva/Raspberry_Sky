@@ -11,20 +11,6 @@ export class Signup extends React.Component {
 			<div className="container m-5 ">
 				<form>
 					<div className="form-row">
-						<div className="form-group col-md-5">
-							<label htmlFor="inputEmail4">Card Number</label>
-							<input type="email" className="form-control" id="cc" placeholder="################" />
-						</div>
-						<div className="form-group col-md-3">
-							<label htmlFor="inputEmail4">CVC#</label>
-							<input type="email" className="form-control" id="cvc" placeholder />
-						</div>
-						<div className="form-group col-md-4">
-							<label htmlFor="inputPassword4">Amount</label>
-							<input type="password" className="form-control" id="amount" placeholder="Amount" />
-						</div>
-					</div>
-					<div className="form-row">
 						<div className="form-group col-md-6">
 							<label htmlFor="inputAddress">First Name</label>
 							<input type="text" className="form-control" id="first" placeholder />
@@ -32,6 +18,28 @@ export class Signup extends React.Component {
 						<div className="form-group col-md-6">
 							<label htmlFor="inputAddress2">Last Name</label>
 							<input type="text" className="form-control" id="last" placeholder />
+						</div>
+					</div>
+					<div className="form-row">
+						<div className="form-group col">
+							<label htmlFor="inputAddress">Email</label>
+							<input type="text" className="form-control" id="email" placeholder />
+						</div>
+					</div>
+					<div className="form-row">
+						<div className="form-group col-md-6">
+							<label htmlFor="inputPassword">Password</label>
+							<input type="password" className="form-control" id="password" placeholder />
+						</div>
+						<div className="form-group col-md-6">
+							<label htmlFor="inputPassword2">Confirm Password</label>
+							<input type="password" className="form-control" id="confirmpassword" placeholder />
+						</div>
+					</div>
+					<div className="form-row">
+						<div className="form-group col">
+							<label htmlFor="inputAddress">Address</label>
+							<input type="text" className="form-control" id="address" placeholder />
 						</div>
 					</div>
 					<div className="form-row">
@@ -54,7 +62,7 @@ export class Signup extends React.Component {
 						</div>
 					</div>
 					<div className="form-row">
-						<div className="form-group col-md-6">
+						<div className="form-group col">
 							<label className="w-100" htmlFor="inputAddress">
 								We accept
 							</label>
@@ -101,17 +109,19 @@ export class Signup extends React.Component {
 								</div>
 							</div>
 						</div>
-						<div className="form-group col-md-6">
-							<label htmlFor="inputAddress2 text-">Message</label>
-							<textarea
-								type="text"
-								className="form-control"
-								id="message"
-								rows={4}
-								placeholder="Apartment, studio, or floor"
-								defaultValue={""}
-							/>
-							Add any notes here
+					</div>
+					<div className="form-row">
+						<div className="form-group col-md-5">
+							<label htmlFor="inputEmail4">Card Number</label>
+							<input type="email" className="form-control" id="cc" placeholder="################" />
+						</div>
+						<div className="form-group col-md-3">
+							<label htmlFor="inputEmail4">Expiration Date</label>
+							<input type="email" className="form-control" id="expires" placeholder />
+						</div>
+						<div className="form-group col-md-4">
+							<label htmlFor="inputPassword4">CVC#</label>
+							<input type="password" className="form-control" id="cvc" placeholder="CVC#" />
 						</div>
 					</div>
 				</form>
