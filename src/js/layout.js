@@ -8,7 +8,6 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
 
 //create your first component
 export class Layout extends React.Component {
@@ -25,11 +24,8 @@ export class Layout extends React.Component {
 						<Switch>
 							<Route path="/" component={Demo} />
 							<Route exact path="/" component={Home} />
-							<Route path="/demo" component={Demo} />
-							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
-						<Footer />
 					</ScrollToTop>
 				</BrowserRouter>
 			</div>

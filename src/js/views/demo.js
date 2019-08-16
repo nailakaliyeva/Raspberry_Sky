@@ -10,7 +10,7 @@ export class Demo extends React.Component {
 		return (
 			<div className="container">
 				<div className="d-flex justify-content-between mt-5">
-					<h1 className="text-center">Status Page</h1>
+					<h1 className="text-center text-danger">Status Page</h1>
 					<button type="button" className="btn btn-danger">
 						Retrieve data
 					</button>
