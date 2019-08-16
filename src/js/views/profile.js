@@ -23,7 +23,6 @@ export class Profile extends React.Component {
 									ID
 								</th>
 								<th className="text-center" scope="col">
-									{" "}
 									Date
 								</th>
 								<th className="text-center" scope="col">

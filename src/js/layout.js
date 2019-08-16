@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import { Profile } from "./views/profile";
+import { Home } from "./views/home";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 
@@ -18,7 +19,8 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Navbar />
 						<Switch>
-							<Route path="/" component={Profile} />
+							<Route path="/profile" component={Profile} />
+							<Route path="/home" component={Home} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 					</ScrollToTop>
