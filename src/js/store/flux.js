@@ -34,14 +34,16 @@ const getState = ({ getStore, setStore }) => {
 		},
 		actions: {
 			addUser: obj => {
+				let store = getStore();
+				setStore({ users: [store.users.concat(obj)] });
 				//get the store
-				fetch("https://3000-c542c7ed-cb4c-48ff-bae0-2b34be1eb370.ws-us0.gitpod.io/user", {
-					method: "post",
-					headers: {
-						"Content-Type": "application/json"
-					},
-					body: JSON.stringify(obj)
-				});
+				// fetch("https://3000-c542c7ed-cb4c-48ff-bae0-2b34be1eb370.ws-us0.gitpod.io/user", {
+				// 	method: "post",
+				// 	headers: {
+				// 		"Content-Type": "application/json"
+				// 	},
+				// 	body: JSON.stringify(obj)
+				// });
 			}
 		}
 	};
