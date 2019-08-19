@@ -30,12 +30,14 @@ const getState = ({ getStore, setStore }) => {
 					atmospherePressure: 777
 				}
 			],
-			users: []
+			users: [],
+			currentUser: null,
+			token: null
 		},
 		actions: {
 			addUser: obj => {
 				let store = getStore();
-				setStore({ users: [store.users.concat(obj)] });
+				setStore({ users: store.users.concat(obj) });
 				//get the store
 				// fetch("https://3000-c542c7ed-cb4c-48ff-bae0-2b34be1eb370.ws-us0.gitpod.io/user", {
 				// 	method: "post",
@@ -44,6 +46,15 @@ const getState = ({ getStore, setStore }) => {
 				// 	},
 				// 	body: JSON.stringify(obj)
 				// });
+			},
+			login: (email, password) => {
+				let store = getStore();
+				let loggedUser = store.users.find(item => item.email === email);
+				console.log("$$$", loggedUser);
+				setStore({ currentUser: loggedUser });
+			},
+			logout: () => {
+				setStore({ currentUser: null });
 			}
 		}
 	};
