@@ -20,13 +20,15 @@ export class Navbar extends React.Component {
 										<a className="navbar-brand mb-0 h1">Logout</a>
 									</Link>
 								) : (
-									<Link to="/login">
-										<a className="navbar-brand mb-0 h1">Login</a>
-									</Link>
+									<span>
+										<Link to="/login">
+											<a className="navbar-brand mb-0 h1">Login</a>
+										</Link>
+										<Link to="/signup">
+											<a className="navbar-brand mb-0 h1">Sign up</a>
+										</Link>
+									</span>
 								)}
-								<Link to="/signup">
-									<a className="navbar-brand mb-0 h1">Sign up</a>
-								</Link>
 							</div>
 						</nav>
 					);

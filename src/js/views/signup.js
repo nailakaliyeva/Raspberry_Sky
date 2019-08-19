@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -216,7 +216,7 @@ export class Signup extends React.Component {
 											zip: this.state.zip,
 											country: this.state.country
 										};
-										actions.addUser(this.state);
+										actions.addUser(this.state, this.props);
 									}}
 									className="btn btn-primary"
 									type="submit">
@@ -230,3 +230,6 @@ export class Signup extends React.Component {
 		);
 	}
 }
+Signup.propTypes = {
+	history: PropTypes.object
+};

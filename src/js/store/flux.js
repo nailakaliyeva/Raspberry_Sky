@@ -35,10 +35,10 @@ const getState = ({ getStore, setStore }) => {
 			token: null
 		},
 		actions: {
-			addUser: obj => {
+			addUser: (obj, props) => {
 				let store = getStore();
 				setStore({ users: store.users.concat(obj) });
-				//get the store
+
 				// fetch("https://3000-c542c7ed-cb4c-48ff-bae0-2b34be1eb370.ws-us0.gitpod.io/user", {
 				// 	method: "post",
 				// 	headers: {
@@ -46,6 +46,7 @@ const getState = ({ getStore, setStore }) => {
 				// 	},
 				// 	body: JSON.stringify(obj)
 				// });
+				props.history.push("/login");
 			},
 			login: (email, password) => {
 				let store = getStore();
