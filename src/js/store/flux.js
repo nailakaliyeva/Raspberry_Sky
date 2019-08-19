@@ -29,22 +29,19 @@ const getState = ({ getStore, setStore }) => {
 					temperature: 55,
 					atmospherePressure: 777
 				}
-			]
+			],
+			users: []
 		},
 		actions: {
-			changeColor: (index, color) => {
+			addUser: obj => {
 				//get the store
-				const store = getStore();
-
-				//we have to loop the entire sessions array to look for the respective index
-				//and change its color
-				const session = store.sessions.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
+				fetch("https://3000-c542c7ed-cb4c-48ff-bae0-2b34be1eb370.ws-us0.gitpod.io/user", {
+					method: "post",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify(obj)
 				});
-
-				//reset the global store
-				setStore({ sessions: sessions });
 			}
 		}
 	};
