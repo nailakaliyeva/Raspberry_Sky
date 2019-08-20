@@ -60,11 +60,15 @@ const getState = ({ getStore, setStore }) => {
 						password: password
 					})
 				})
-					.then(response => response.json())
+					.then(response => {
+						if (!response.ok) throw Error();
+						response.json();
+					})
 					.then(token => {
 						setStore({ token: token.jwt });
-					});
-				props.history.push("/profile");
+						props.history.push("/profile");
+					})
+					.catch(err => console.log(err));
 				// let store = getStore();
 				// let loggedUser = store.users.find(item => item.email === email);
 				// console.log("$$$", loggedUser);
