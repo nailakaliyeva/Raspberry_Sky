@@ -1,6 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			token: null,
 			sessions: [
 				{
 					id: 1,
@@ -49,10 +50,24 @@ const getState = ({ getStore, setStore }) => {
 				props.history.push("/login");
 			},
 			login: (email, password) => {
-				let store = getStore();
-				let loggedUser = store.users.find(item => item.email === email);
-				console.log("$$$", loggedUser);
-				setStore({ currentUser: loggedUser });
+				fetch("https://3000-acdb7774-faec-45ef-9a08-2fced242f170.ws-us0.gitpod.io/login", {
+					method: "post",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						email: email,
+						password: password
+					})
+				})
+					.then(response => response.json())
+					.then(token => {
+						setStore({ token: token.jwt });
+					});
+				// let store = getStore();
+				// let loggedUser = store.users.find(item => item.email === email);
+				// console.log("$$$", loggedUser);
+				// setStore({ currentUser: loggedUser });
 			},
 			logout: () => {
 				setStore({ currentUser: null });

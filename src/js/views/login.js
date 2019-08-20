@@ -26,7 +26,7 @@ export class Login extends React.Component {
 									onChange={e => {
 										this.setState({ email: e.target.value });
 									}}
-									type="email"
+									type="text"
 									className="form-control"
 									id="exampleInputEmail1"
 									aria-describedby="emailHelp"
@@ -40,7 +40,7 @@ export class Login extends React.Component {
 								<label htmlFor="exampleInputPassword1">Password</label>
 								<input
 									onChange={e => this.setState({ password: e.target.value })}
-									type="password"
+									type="text"
 									className="form-control"
 									id="exampleInputPassword1"
 									placeholder="Password"
