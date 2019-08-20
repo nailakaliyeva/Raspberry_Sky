@@ -53,7 +53,7 @@ export class Login extends React.Component {
 								</label>
 							</div>
 							<button
-								onClick={() => actions.login(this.state.email, this.state.password)}
+								onClick={() => actions.login(this.state.email, this.state.password, this.props)}
 								type="submit"
 								className="btn btn-primary">
 								Submit

@@ -49,7 +49,7 @@ const getState = ({ getStore, setStore }) => {
 				// });
 				props.history.push("/login");
 			},
-			login: (email, password) => {
+			login: (email, password, props) => {
 				fetch("https://3000-acdb7774-faec-45ef-9a08-2fced242f170.ws-us0.gitpod.io/login", {
 					method: "post",
 					headers: {
@@ -64,6 +64,7 @@ const getState = ({ getStore, setStore }) => {
 					.then(token => {
 						setStore({ token: token.jwt });
 					});
+				props.history.push("/profile");
 				// let store = getStore();
 				// let loggedUser = store.users.find(item => item.email === email);
 				// console.log("$$$", loggedUser);
