@@ -10,12 +10,13 @@ export class Signup extends React.Component {
 		super();
 
 		this.state = {
+			username: "",
 			first_name: "",
 			last_name: "",
 			email: "",
 			password: "",
 			confirm_password: "",
-			state: "",
+			stateW: "",
 			address: "",
 			city: "",
 			zipcode: "",
@@ -29,6 +30,16 @@ export class Signup extends React.Component {
 					return (
 						<div className="container m-5 ">
 							<div className="form-row">
+								<div className="form-group col-md-6">
+									<label htmlFor="inputAddress">Username</label>
+									<input
+										onChange={e => this.setState({ username: e.target.value })}
+										type="text"
+										className="form-control"
+										id="first"
+										placeholder
+									/>
+								</div>
 								<div className="form-group col-md-6">
 									<label htmlFor="inputAddress">First Name</label>
 									<input
@@ -109,7 +120,7 @@ export class Signup extends React.Component {
 								<div className="form-group col-md-4">
 									<label htmlFor="inputState">State</label>
 									<select
-										onChange={e => this.setState({ state: e.target.value })}
+										onChange={e => this.setState({ stateW: e.target.value })}
 										id="state"
 										className="form-control">
 										<option selected>Pick a state</option>
@@ -142,12 +153,12 @@ export class Signup extends React.Component {
 								<button
 									onClick={() => {
 										let person = {
-											username: "Naila",
+											username: this.state.username,
 											first_name: this.state.first_name,
 											last_name: this.state.last_name,
 											email: this.state.email,
 											password: this.state.password,
-											state: this.state.state,
+											stateW: this.state.stateW,
 											//confirm_password: this.state.confirm_password,
 											address: this.state.address,
 											city: this.state.city,
