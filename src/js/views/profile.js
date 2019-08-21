@@ -19,25 +19,25 @@ export class Profile extends React.Component {
 					<table className="table table-dark">
 						<thead>
 							<tr>
-								<th className="text-center" scope="col">
+								<th className="text-left" scope="col">
 									Position
 								</th>
-								<th className="text-center" scope="col">
+								<th className="text-left" scope="col">
 									Date
 								</th>
-								<th className="text-center" scope="col">
+								<th className="text-left" scope="col">
 									Time
 								</th>
-								<th className="text-center" scope="col">
+								<th className="text-left" scope="col">
 									Magnetic Fields
 								</th>
-								<th className="text-center" scope="col">
+								<th className="text-left" scope="col">
 									Humidity
 								</th>
-								<th className="text-center" scope="col">
+								<th className="text-left" scope="col">
 									Temperature
 								</th>
-								<th className="text-center" scope="col">
+								<th className="text-left" scope="col">
 									Atmosphere Pressure
 								</th>
 							</tr>
@@ -48,21 +48,40 @@ export class Profile extends React.Component {
 									return store.sessions.map((item, index) => {
 										return (
 											<tr key={index}>
-												<td className="text-center">
-													{item.pitch} + {item.roll} + {item.yaw}
+												<td className="text-left">
+													pitch : {item.pitch}
+													<br />
+													roll : {item.roll}
+													<br />
+													yaw : {item.yaw}
 												</td>
-												<td className="text-center">{item.date}</td>
-												<td className="text-center">{item.time}</td>
-												<td className="text-center">
-													{item.mag_x} + {item.mag_y} + {item.mag_z} tesla
+												<td className="text-left">
+													<br />
+													{item.date}
 												</td>
-												<td className="text-center">{item.humidity} %</td>
-												<td className="text-center">
+												<td className="text-left">
+													<br />
+													{item.time}
+												</td>
+												<td className="text-left">
+													x axis : {item.mag_x} µT
+													<br />y axis : {item.mag_y} µT
+													<br />z axis : {item.mag_z} µT
+												</td>
+												<td className="text-left">
+													<br />
+													{item.humidity} %
+												</td>
+												<td className="text-left">
+													<br />
 													{item.temperature}
 													{"\u2109"}
 													{/* escape charrachter for f degrees*/}
 												</td>
-												<td className="text-center">{item.atmospherePressure} psi</td>
+												<td className="text-left">
+													<br />
+													{item.atmospherePressure} psi
+												</td>
 											</tr>
 										);
 									});
