@@ -12,7 +12,6 @@ const getState = ({ getStore, setStore }) => {
 					x_axis: 456,
 					y_axis: 4567,
 					z_axis: 44556,
-					speed: 456,
 					temperature: 456,
 					atmospherePressure: 456
 				},
