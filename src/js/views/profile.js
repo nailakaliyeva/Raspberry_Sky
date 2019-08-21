@@ -20,7 +20,7 @@ export class Profile extends React.Component {
 						<thead>
 							<tr>
 								<th className="text-center" scope="col">
-									ID
+									Position
 								</th>
 								<th className="text-center" scope="col">
 									Date
@@ -32,7 +32,7 @@ export class Profile extends React.Component {
 									Magnetic Fields
 								</th>
 								<th className="text-center" scope="col">
-									Speed
+									Humidity
 								</th>
 								<th className="text-center" scope="col">
 									Temperature
@@ -48,11 +48,15 @@ export class Profile extends React.Component {
 									return store.sessions.map((item, index) => {
 										return (
 											<tr key={index}>
-												<td className="text-center">{item.id}</td>
+												<td className="text-center">
+													{item.pitch} + {item.roll} + {item.yaw}
+												</td>
 												<td className="text-center">{item.date}</td>
 												<td className="text-center">{item.time}</td>
-												<td className="text-center">{item.magneticField} tesla</td>
-												<td className="text-center">{item.speed} fps</td>
+												<td className="text-center">
+													{item.mag_x} + {item.mag_y} + {item.mag_z} tesla
+												</td>
+												<td className="text-center">{item.humidity} %</td>
 												<td className="text-center">
 													{item.temperature}
 													{"\u2109"}
