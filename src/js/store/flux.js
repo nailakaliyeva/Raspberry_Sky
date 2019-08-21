@@ -9,9 +9,9 @@ const getState = ({ getStore, setStore }) => {
 					yaw: 2,
 					date: "12 / 15 / 19",
 					time: "ttt",
-					mag_x: 456,
-					mag_y: 4567,
-					mag_z: 44556,
+					x_axis: 456,
+					y_axis: 4567,
+					z_axis: 44556,
 					speed: 456,
 					temperature: 456,
 					atmospherePressure: 456
@@ -57,23 +57,25 @@ const getState = ({ getStore, setStore }) => {
 				// });
 				props.history.push("/login");
 			},
-			login: (email, password, props) => {
-				fetch("https://3000-acdb7774-faec-45ef-9a08-2fced242f170.ws-us0.gitpod.io/login", {
+			login: (username, password, props) => {
+				fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/login", {
 					method: "post",
 					headers: {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify({
-						email: email,
+						username: username,
 						password: password
 					})
 				})
 					.then(response => {
 						if (!response.ok) throw Error();
-						response.json();
+						return response.json();
 					})
+
 					.then(token => {
-						setStore({ token: token.jwt });
+						console.log(token);
+						setStore({ token: token.jwt, currentUser: null });
 						props.history.push("/profile");
 					})
 					.catch(err => console.log(err));

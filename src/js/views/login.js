@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -53,7 +53,9 @@ export class Login extends React.Component {
 								</label>
 							</div>
 							<button
-								onClick={() => actions.login(this.state.email, this.state.password, this.props)}
+								onClick={() => {
+									actions.login(this.state.email, this.state.password, this.props);
+								}}
 								type="submit"
 								className="btn btn-primary">
 								Submit
@@ -65,3 +67,6 @@ export class Login extends React.Component {
 		);
 	}
 }
+Login.propTypes = {
+	history: PropTypes.object
+};

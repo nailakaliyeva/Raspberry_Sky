@@ -45,46 +45,49 @@ export class Profile extends React.Component {
 						<tbody>
 							<Context.Consumer>
 								{({ store, actions }) => {
-									return store.sessions.map((item, index) => {
-										return (
-											<tr key={index}>
-												<td className="text-left">
-													pitch : {item.pitch}
-													<br />
-													roll : {item.roll}
-													<br />
-													yaw : {item.yaw}
-												</td>
-												<td className="text-left">
-													<br />
-													{item.date}
-												</td>
-												<td className="text-left">
-													<br />
-													{item.time}
-												</td>
-												<td className="text-left">
-													x axis : {item.x_axis} µT
-													<br />y axis : {item.y_axis} µT
-													<br />z axis : {item.z_axis} µT
-												</td>
-												<td className="text-center">
-													<br />
-													{item.humidity} %
-												</td>
-												<td className="text-center">
-													<br />
-													{item.temperature}
-													{"\u2109"}
-													{/* escape charrachter for f degrees*/}
-												</td>
-												<td className="text-center">
-													<br />
-													{item.pressure} psi
-												</td>
-											</tr>
-										);
-									});
+									return (
+										store.sessions &&
+										store.sessions.map((item, index) => {
+											return (
+												<tr key={index}>
+													<td className="text-left">
+														pitch : {item.pitch}
+														<br />
+														roll : {item.roll}
+														<br />
+														yaw : {item.yaw}
+													</td>
+													<td className="text-left">
+														<br />
+														{item.date}
+													</td>
+													<td className="text-left">
+														<br />
+														{item.time}
+													</td>
+													<td className="text-left">
+														x axis : {item.x_axis} µT
+														<br />y axis : {item.y_axis} µT
+														<br />z axis : {item.z_axis} µT
+													</td>
+													<td className="text-center">
+														<br />
+														{item.humidity} %
+													</td>
+													<td className="text-center">
+														<br />
+														{item.temperature}
+														{"\u2109"}
+														{/* escape charrachter for f degrees*/}
+													</td>
+													<td className="text-center">
+														<br />
+														{item.pressure} psi
+													</td>
+												</tr>
+											);
+										})
+									);
 								}}
 							</Context.Consumer>
 						</tbody>
