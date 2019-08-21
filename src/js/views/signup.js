@@ -15,9 +15,10 @@ export class Signup extends React.Component {
 			email: "",
 			password: "",
 			confirm_password: "",
+			state: "",
 			address: "",
 			city: "",
-			zip: "",
+			zipcode: "",
 			state: ""
 		};
 	}
@@ -120,7 +121,7 @@ export class Signup extends React.Component {
 								<div className="form-group col-md-2">
 									<label htmlFor="inputZip">Zip</label>
 									<input
-										onChange={e => this.setState({ zip: e.target.value })}
+										onChange={e => this.setState({ zipcode: e.target.value })}
 										type="text"
 										className="form-control"
 										id="zip"
@@ -141,17 +142,21 @@ export class Signup extends React.Component {
 								<button
 									onClick={() => {
 										let person = {
+											username: "Naila",
 											first_name: this.state.first_name,
 											last_name: this.state.last_name,
 											email: this.state.email,
 											password: this.state.password,
-											confirm_password: this.state.confirm_password,
+											state: this.state.state,
+											//confirm_password: this.state.confirm_password,
 											address: this.state.address,
 											city: this.state.city,
-											zip: this.state.zip,
-											country: this.state.country
+											zipcode: this.state.zipcode,
+											country: this.state.country,
+											products: []
 										};
-										actions.addUser(this.state, this.props);
+										console.log("person", person);
+										actions.addUser(person, this.props);
 									}}
 									className="btn btn-primary"
 									type="submit">

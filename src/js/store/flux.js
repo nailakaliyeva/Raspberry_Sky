@@ -44,16 +44,15 @@ const getState = ({ getStore, setStore }) => {
 		},
 		actions: {
 			addUser: (obj, props) => {
-				let store = getStore();
-				setStore({ users: store.users.concat(obj) });
-
-				// fetch("https://3000-c542c7ed-cb4c-48ff-bae0-2b34be1eb370.ws-us0.gitpod.io/user", {
-				// 	method: "post",
-				// 	headers: {
-				// 		"Content-Type": "application/json"
-				// 	},
-				// 	body: JSON.stringify(obj)
-				// });
+				// let store = getStore();
+				// setStore({ users: store.users.concat(obj) });
+				fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/user", {
+					method: "post",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify(obj)
+				});
 				props.history.push("/login");
 			},
 			login: (username, password, props) => {
