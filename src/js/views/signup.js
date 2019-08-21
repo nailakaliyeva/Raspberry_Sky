@@ -136,73 +136,8 @@ export class Signup extends React.Component {
 									/>
 								</div>
 							</div>
+
 							<div className="form-row">
-								<div className="form-group col">
-									<label className="w-100" htmlFor="inputAddress">
-										We accept
-									</label>
-									<div className="form-check bg-secondary text-white p-2 rounded credit">
-										<div className="form-check form-check-inline">
-											<input
-												className="form-check-input"
-												type="radio"
-												name="creditCard"
-												defaultValue="option1"
-											/>
-											<label className="form-check-label" htmlFor="inlineradio1" />
-											<i className="fab fa-cc-visa" />
-										</div>
-										<div className="form-check form-check-inline">
-											<input
-												className="form-check-input"
-												type="radio"
-												name="creditCard"
-												defaultValue="option2"
-											/>
-											<label className="form-check-label" htmlFor="inlineradio2" />
-											<i className="fab fa-cc-visa" />
-										</div>
-										<div className="form-check form-check-inline">
-											<input
-												className="form-check-input"
-												type="radio"
-												name="creditCard"
-												defaultValue="option3"
-											/>
-											<label className="form-check-label" htmlFor="inlineradio3" />
-											<i className="fab fa-cc-diners-club" />
-										</div>
-										<div className="form-check form-check-inline">
-											<input
-												className="form-check-input"
-												type="radio"
-												name="creditCard"
-												defaultValue="option4"
-											/>
-											<label className="form-check-label" htmlFor="inlineradio4" />
-											<i className="fab fa-cc-apple-pay" />
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="form-row">
-								<div className="form-group col-md-5">
-									<label htmlFor="inputEmail4">Card Number</label>
-									<input
-										type="email"
-										className="form-control"
-										id="cc"
-										placeholder="################"
-									/>
-								</div>
-								<div className="form-group col-md-3">
-									<label htmlFor="inputEmail4">Expiration Date</label>
-									<input type="email" className="form-control" id="expires" placeholder />
-								</div>
-								<div className="form-group col-md-4">
-									<label htmlFor="inputPassword4">CVC#</label>
-									<input type="password" className="form-control" id="cvc" placeholder="CVC#" />
-								</div>
 								<button
 									onClick={() => {
 										let person = {
