@@ -75,7 +75,7 @@ const getState = ({ getStore, setStore }) => {
 
 					.then(token => {
 						console.log(token);
-						setStore({ token: token.jwt, currentUser: null });
+						setStore({ token: token.jwt, currentUser: true });
 						props.history.push("/profile");
 					})
 					.catch(err => console.log(err));

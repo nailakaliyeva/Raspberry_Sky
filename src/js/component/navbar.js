@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 export class Navbar extends React.Component {
 	render() {
@@ -16,8 +17,8 @@ export class Navbar extends React.Component {
 							</Link>
 							<div className="ml-auto">
 								{store.currentUser !== null ? (
-									<Link to="/logout">
-										<a className="navbar-brand mb-0 h1">Logout</a>
+									<Link to="/login" onClick={() => actions.logout()} className="navbar-brand mb-0 h1">
+										Logout
 									</Link>
 								) : (
 									<span>
@@ -37,3 +38,6 @@ export class Navbar extends React.Component {
 		);
 	}
 }
+Navbar.propTypes = {
+	history: PropTypes.object
+};
