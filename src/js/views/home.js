@@ -20,13 +20,13 @@ export class Home extends React.Component {
 					recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
 					maiores alias consequatur aut perferendis doloribus asperiores repellat.
 				</p>
-				<div className="embed-responsive embed-responsive-16by9">
+				{/*<div className="embed-responsive embed-responsive-16by9">
 					<iframe
 						className="embed-responsive-item"
 						src="https://www.youtube.com/embed/_1pW-3cc1y4"
 						allowFullScreen
 					/>
-				</div>
+				</div>*/}
 				<p>
 					<Link to="/subscribe">
 						<a className="navbar-brand mb-0 h1 ">
