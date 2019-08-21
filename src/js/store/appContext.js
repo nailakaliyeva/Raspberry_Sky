@@ -22,6 +22,18 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
+			fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/pressure")
+				.then(response => response.json())
+				.then(data => {
+					let store = this.state.store;
+					this.setState({
+						store: {
+							...store,
+							sessions: data
+						}
+					});
+				});
+
 			/**
 			 * EDIT THIS!
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime

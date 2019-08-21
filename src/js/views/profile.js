@@ -64,23 +64,23 @@ export class Profile extends React.Component {
 													{item.time}
 												</td>
 												<td className="text-left">
-													x axis : {item.mag_x} µT
-													<br />y axis : {item.mag_y} µT
-													<br />z axis : {item.mag_z} µT
+													x axis : {item.x_axis} µT
+													<br />y axis : {item.y_axis} µT
+													<br />z axis : {item.z_axis} µT
 												</td>
-												<td className="text-left">
+												<td className="text-center">
 													<br />
 													{item.humidity} %
 												</td>
-												<td className="text-left">
+												<td className="text-center">
 													<br />
 													{item.temperature}
 													{"\u2109"}
 													{/* escape charrachter for f degrees*/}
 												</td>
-												<td className="text-left">
+												<td className="text-center">
 													<br />
-													{item.atmospherePressure} psi
+													{item.pressure} psi
 												</td>
 											</tr>
 										);
