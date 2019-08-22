@@ -19,7 +19,10 @@ export class Login extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<div className="container box mx-auto pt-3">
+						<div className="container box mx-auto pt-3 mt-5">
+							<div className="text-center login">
+								<h2>Login</h2>
+							</div>
 							<div className="form-group col-7 m-auto">
 								<label className="my-3" htmlFor="exampleInputEmail1">
 									Enter your username
@@ -53,7 +56,7 @@ export class Login extends React.Component {
 										actions.login(this.state.email, this.state.password, this.props);
 									}}
 									type="submit"
-									className="btn btn-info mt-4">
+									className="btn btn-info btn-lg">
 									Submit
 								</button>
 							</div>
