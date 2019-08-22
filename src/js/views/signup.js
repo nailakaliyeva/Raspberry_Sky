@@ -32,7 +32,13 @@ export class Signup extends React.Component {
 							<div id="stars" />
 							<div id="stars2" />
 							<div id="stars3" />
-							<div className="container m-5 ">
+							<div className="container m-5  parentForm mx-auto">
+								<div className="text-center login">
+									<h2 className="pinkPart text-white">
+										Log
+										<span className="pinkPart">In</span>
+									</h2>
+								</div>
 								<div className="form-row">
 									<div className="form-group col-md-6">
 										<label htmlFor="inputAddress">First Name</label>
@@ -190,7 +196,7 @@ export class Signup extends React.Component {
 									</div>
 								</div>
 
-								<div className="form-row">
+								<div className="form-row ">
 									<button
 										onClick={() => {
 											let person = {
@@ -210,7 +216,7 @@ export class Signup extends React.Component {
 											console.log("person", person);
 											actions.addUser(person, this.props);
 										}}
-										className="btn btn-primary"
+										className="btn btn-info btn-lg signUpBtn mx-auto"
 										type="submit">
 										Submit form
 									</button>

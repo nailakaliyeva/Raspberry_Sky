@@ -25,7 +25,10 @@ export class Login extends React.Component {
 							<div id="stars3" />
 							<div className="container box mx-auto pt-3 mt-5">
 								<div className="text-center login">
-									<h2>Login</h2>
+									<h2 className="pinkPart text-white">
+										Log
+										<span className="pinkPart">In</span>
+									</h2>
 								</div>
 								<div className="form-group col-7 m-auto">
 									<label className="my-3" htmlFor="exampleInputEmail1">
@@ -60,7 +63,7 @@ export class Login extends React.Component {
 											actions.login(this.state.email, this.state.password, this.props);
 										}}
 										type="submit"
-										className="btn btn-info btn-lg">
+										className="btn btn-info btn-lg loginBtn">
 										Submit
 									</button>
 								</div>
