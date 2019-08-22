@@ -16,7 +16,7 @@ export class Signup extends React.Component {
 			email: "",
 			password: "",
 			confirm_password: "",
-			stateW: "",
+			state: "",
 			address: "",
 			city: "",
 			zipcode: "",
@@ -30,16 +30,6 @@ export class Signup extends React.Component {
 					return (
 						<div className="container m-5 ">
 							<div className="form-row">
-								<div className="form-group col-md-6">
-									<label htmlFor="inputAddress">Username</label>
-									<input
-										onChange={e => this.setState({ username: e.target.value })}
-										type="text"
-										className="form-control"
-										id="first"
-										placeholder
-									/>
-								</div>
 								<div className="form-group col-md-6">
 									<label htmlFor="inputAddress">First Name</label>
 									<input
@@ -61,7 +51,19 @@ export class Signup extends React.Component {
 									/>
 								</div>
 							</div>
+
 							<div className="form-row">
+								<div className="form-group col-md-6">
+									<label htmlFor="inputAddress">Username</label>
+									<input
+										onChange={e => this.setState({ username: e.target.value })}
+										type="text"
+										className="form-control"
+										id="first"
+										placeholder
+									/>
+								</div>
+
 								<div className="form-group col">
 									<label htmlFor="inputAddress">Email</label>
 									<input
@@ -120,13 +122,29 @@ export class Signup extends React.Component {
 								<div className="form-group col-md-4">
 									<label htmlFor="inputState">State</label>
 									<select
-										onChange={e => this.setState({ stateW: e.target.value })}
+										onChange={e => this.setState({ state: e.target.value })}
 										id="state"
 										className="form-control">
 										<option selected>Pick a state</option>
 										<option value="Florida">Florida</option>
-										<option value="Miami">Miami</option>
-										<option value="Zimbabwe">Zimbabwe</option>
+										<option value="New York">New York</option>
+										<option value="California">California</option>
+										<option value="Texas">Texas</option>
+										<option value="North Carolina">North Carolina</option>
+										<option value="South Carolina">South Carolina</option>
+										<option value="Massachussets">Massachussets</option>
+										<option value="Georgia">Georgia</option>
+										<option value="Alabama">Alabama</option>
+										<option value="Virginia">Virginia</option>
+										<option value="Louisiana">Louisiana</option>
+										<option value="New Mexico">New Mexico</option>
+										<option value="Nevada">Nevada</option>
+										<option value="Ohio">Ohio</option>
+										<option value="Oregon">Oregon</option>
+										<option value="Delaware">Delaware</option>
+										<option value="New Jersey">New Jersey</option>
+										<option value="Indiana">Indiana</option>
+										<option value="Colorado">Colorado</option>
 									</select>
 								</div>
 								<div className="form-group col-md-2">
@@ -139,13 +157,32 @@ export class Signup extends React.Component {
 									/>
 								</div>
 								<div className="form-group col-md-6">
-									<label htmlFor="inputCity">Country</label>
-									<input
+									<label htmlFor="inputState">Country</label>
+									<select
 										onChange={e => this.setState({ country: e.target.value })}
-										type="text"
-										className="form-control"
-										id="inputCity"
-									/>
+										id="country"
+										className="form-control">
+										<option selected>Pick a country</option>
+										<option value="United States of America">United States of America</option>
+										<option value="Canada">Canada</option>
+										<option value="Israel">Israel</option>
+										<option value="Mexico">Mexico</option>
+										<option value="Brazil">Brazil</option>
+										<option value="United Kingdom">United Kingdom</option>
+										<option value="Germany">Germany</option>
+										<option value="France">France</option>
+										<option value="Russian Federation">Russian Federation</option>
+										<option value="Ukraine">Ukraine</option>
+										<option value="Belarus">Belarus</option>
+										<option value="India">India</option>
+										<option value="Cuba">Cuba</option>
+										<option value="Japan">Japan</option>
+										<option value="China">China</option>
+										<option value="Italy">Italy</option>
+										<option value="Spain">Spain</option>
+										<option value="Kazakhstan">Kazakhstan</option>
+										<option value="Denmark">Denmark</option>
+									</select>
 								</div>
 							</div>
 
@@ -158,8 +195,8 @@ export class Signup extends React.Component {
 											last_name: this.state.last_name,
 											email: this.state.email,
 											password: this.state.password,
-											stateW: this.state.stateW,
-											//confirm_password: this.state.confirm_password,
+											state: this.state.state,
+
 											address: this.state.address,
 											city: this.state.city,
 											zipcode: this.state.zipcode,
