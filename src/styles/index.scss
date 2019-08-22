@@ -1,6 +1,43 @@
 /*
     General Styles
 */
+
+.navbar{
+  background: linear-gradient(38deg, #630eb6, #5005db);
+  box-shadow: 0px 5px 6px rgb(107, 104, 104);
+}
+
+.title-name{
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px #000;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.icons{
+    text-shadow: 1px 1px 2px #000;
+    margin-left: 10px;
+}
+
+.rasp{
+    color: #fff;
+}
+
+.sky{
+    color: #ec00ce;
+}
+#signups{
+    color: #fff;
+}
+#signups:hover{
+    color: #ec00ce;
+}
+
+#signups { transition: all .2s ease-in-out; }
+#signups:hover { transform: scale(1.1); }
+
+
 .box{
     width: 30rem;
     height: 21rem;
