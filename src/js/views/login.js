@@ -21,7 +21,10 @@ export class Login extends React.Component {
 					return (
 						<div className="container box mx-auto pt-3 mt-5">
 							<div className="text-center login">
-								<h2>Login</h2>
+								<h2 className="pinkPart text-white">
+									Log
+									<span className="pinkPart">In</span>
+								</h2>
 							</div>
 							<div className="form-group col-7 m-auto">
 								<label className="my-3" htmlFor="exampleInputEmail1">

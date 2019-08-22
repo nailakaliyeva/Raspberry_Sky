@@ -30,7 +30,10 @@ export class Signup extends React.Component {
 					return (
 						<div className="container m-5 mx-auto parentForm p-3 px-5">
 							<div className="text-center login mb-4">
-								<h2>Sign Up</h2>
+								<h2 className="pinkPart text-white">
+									Sign
+									<span className="pinkPart">Up</span>
+								</h2>
 							</div>
 							<div className="form-row ">
 								<div className="form-group col-md-6">
