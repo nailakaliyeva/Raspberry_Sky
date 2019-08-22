@@ -2,6 +2,7 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			token: null,
+			products: [],
 			sessions: [
 				{
 					pitch: 2,

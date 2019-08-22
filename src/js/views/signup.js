@@ -205,8 +205,7 @@ export class Signup extends React.Component {
 											address: this.state.address,
 											city: this.state.city,
 											zipcode: this.state.zipcode,
-											country: this.state.country,
-											products: []
+											country: this.state.country
 										};
 										console.log("person", person);
 										actions.addUser(person, this.props);
