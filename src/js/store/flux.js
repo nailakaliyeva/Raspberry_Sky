@@ -73,7 +73,7 @@ const getState = ({ getStore, setStore }) => {
 
 					.then(token => {
 						console.log(token);
-						setStore({ token: token.jwt, currentUser: true });
+						setStore({ token: token.jwt, currentUser: token.id });
 						props.history.push("/profile");
 					})
 					.catch(err => console.log(err));
@@ -83,7 +83,7 @@ const getState = ({ getStore, setStore }) => {
 				// setStore({ currentUser: loggedUser });
 			},
 			logout: () => {
-				setStore({ currentUser: null });
+				setStore({ currentUser: null, token: null });
 			}
 		}
 	};
