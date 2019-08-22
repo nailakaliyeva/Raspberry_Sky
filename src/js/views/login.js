@@ -19,46 +19,51 @@ export class Login extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<div className="container box mx-auto pt-3 mt-5">
-							<div className="text-center login">
-								<h2>Login</h2>
-							</div>
-							<div className="form-group col-7 m-auto">
-								<label className="my-3" htmlFor="exampleInputEmail1">
-									Enter your username
-								</label>
-								<input
-									onChange={e => {
-										this.setState({ email: e.target.value });
-									}}
-									type="text"
-									className="form-control"
-									id="exampleInputEmail1"
-									aria-describedby="emailHelp"
-									placeholder="johnnie_doe"
-								/>
-							</div>
-							<div className="form-group col-7 m-auto">
-								<label className="my-3" htmlFor="exampleInputPassword1">
-									Password
-								</label>
-								<input
-									onChange={e => this.setState({ password: e.target.value })}
-									type="text"
-									className="form-control"
-									id="exampleInputPassword1"
-									placeholder="12345464"
-								/>
-							</div>
-							<div className="text-center m-auto">
-								<button
-									onClick={() => {
-										actions.login(this.state.email, this.state.password, this.props);
-									}}
-									type="submit"
-									className="btn btn-info btn-lg">
-									Submit
-								</button>
+						<div>
+							<div id="stars" />
+							<div id="stars2" />
+							<div id="stars3" />
+							<div className="container box mx-auto pt-3 mt-5">
+								<div className="text-center login">
+									<h2>Login</h2>
+								</div>
+								<div className="form-group col-7 m-auto">
+									<label className="my-3" htmlFor="exampleInputEmail1">
+										Enter your username
+									</label>
+									<input
+										onChange={e => {
+											this.setState({ email: e.target.value });
+										}}
+										type="text"
+										className="form-control"
+										id="exampleInputEmail1"
+										aria-describedby="emailHelp"
+										placeholder="johnnie_doe"
+									/>
+								</div>
+								<div className="form-group col-7 m-auto">
+									<label className="my-3" htmlFor="exampleInputPassword1">
+										Password
+									</label>
+									<input
+										onChange={e => this.setState({ password: e.target.value })}
+										type="text"
+										className="form-control"
+										id="exampleInputPassword1"
+										placeholder="12345464"
+									/>
+								</div>
+								<div className="text-center m-auto">
+									<button
+										onClick={() => {
+											actions.login(this.state.email, this.state.password, this.props);
+										}}
+										type="submit"
+										className="btn btn-info btn-lg">
+										Submit
+									</button>
+								</div>
 							</div>
 						</div>
 					);
