@@ -44,10 +44,10 @@ export class Login extends React.Component {
 								</label>
 								<input
 									onChange={e => this.setState({ password: e.target.value })}
-									type="text"
+									type="password"
 									className="form-control"
 									id="exampleInputPassword1"
-									placeholder="12345464"
+									placeholder="my_password123!!"
 								/>
 							</div>
 							<div className="text-center m-auto">
@@ -56,7 +56,7 @@ export class Login extends React.Component {
 										actions.login(this.state.email, this.state.password, this.props);
 									}}
 									type="submit"
-									className="btn btn-info btn-lg">
+									className="btn btn-info btn-lg loginBtn">
 									Submit
 								</button>
 							</div>
