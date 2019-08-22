@@ -19,9 +19,11 @@ export class Login extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<div className="container box mx-auto pt-5">
+						<div className="container box mx-auto pt-3">
 							<div className="form-group col-7 m-auto">
-								<label htmlFor="exampleInputEmail1">Enter your username</label>
+								<label className="my-3" htmlFor="exampleInputEmail1">
+									Enter your username
+								</label>
 								<input
 									onChange={e => {
 										this.setState({ email: e.target.value });
@@ -34,7 +36,9 @@ export class Login extends React.Component {
 								/>
 							</div>
 							<div className="form-group col-7 m-auto">
-								<label htmlFor="exampleInputPassword1">Password</label>
+								<label className="my-3" htmlFor="exampleInputPassword1">
+									Password
+								</label>
 								<input
 									onChange={e => this.setState({ password: e.target.value })}
 									type="text"
@@ -49,7 +53,7 @@ export class Login extends React.Component {
 										actions.login(this.state.email, this.state.password, this.props);
 									}}
 									type="submit"
-									className="btn btn-primary mt-3">
+									className="btn btn-info mt-4">
 									Submit
 								</button>
 							</div>
