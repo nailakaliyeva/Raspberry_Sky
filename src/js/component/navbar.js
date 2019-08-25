@@ -3,16 +3,29 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 export class Navbar extends React.Component {
+	constructor() {
+		super();
+	}
 	render() {
+		window.onscroll = () => {
+			const nav = document.querySelector("nav");
+			if (this.scrollY <= 10) {
+				nav.classList.remove("navbar");
+				nav.classList.add("scroll");
+			} else {
+				nav.classList.remove("scroll");
+				nav.classList.add("navbar");
+			}
+		};
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<nav className="navbar navbar-light mb-3 ">
+						<nav className="navbar navbar-light mb-3">
 							<Link to="/home">
-								<i className="fas fa-user-astronaut fa-3x text-white icons" />
+								<i className="fas fa-project-diagram fa-2x text-white icons" />
 								<a className="navbar-brand mb-0 h1 title-name">
-									<span className="rasp">Raspberry</span> <span className="sky">Sky</span>
+									<span className="rasp">Raspberry Sky</span>
 								</a>
 							</Link>
 							<div className="ml-auto">

@@ -14,27 +14,38 @@
     background-color: #ec00ce;
 
 }
-
+//Auto sentence
+.typer{
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 1px 1px #101010;
+    font-family: 'Permanent Marker', cursive;
+}
+//
 .hightier{
     margin-top: 100px;
 }
 .pinkPart{
-    font-family: 'Pacifico';
+
     color:#ec00ce;
     text-shadow: 1px 1px 2px #000;
-    font-family: 'Pacifico', cursive;
+    // font-family: 'Pacifico', cursive;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.head-title{
+     font-family: 'Permanent Marker', cursive;
+     margin-top: 100px;
 }
 
 
-.navbar{
-  background: linear-gradient(38deg, #630eb6, #5005db);
-  box-shadow: 0px 5px 6px rgb(0, 0, 0);
-   margin: 0;
-    border: 0;
-}
 
+.alii{
+    color:#edc27b;
+}
 .title-name{
-    font-family: 'Pacifico', cursive;
+    // font-family: 'Pacifico', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-size: 2em;
     text-shadow: 1px 1px 2px #000;
     padding-left: 15px;
@@ -51,17 +62,25 @@
 }
 
 .sky{
-    color: #ec00ce;
-}
-#signups{
-    color: #fff;
-}
-#signups:hover{
-    color: #ec00ce;
+     color: #fff;
 }
 
-#signups { transition: all .2s ease-in-out; }
-#signups:hover { transform: scale(1.1); }
+
+
+#signups {
+     color: #fff;
+     transform: scale(1.1);
+     transition: border-bottom 0.3s;
+     padding-bottom: 1px;
+     border-bottom: 2px solid transparent;
+     letter-spacing: 2px;
+     font-size: 14px;
+}
+#signups:hover {
+    color: #edc27b;
+    border-bottom: 2px solid #edc27b;
+    cursor: pointer;
+ }
 
 
 .box{
@@ -79,29 +98,133 @@
 
 
 
-nav{
+.navbar{
     z-index: 5000;
+    border-top: 4px solid #edc27b;
+    background: rgba(16, 16, 16, 0.4);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top:0;
+
+}
+
+.scroll {
+     z-index: 5000;
+    border-top: 4px solid #edc27b;
+     border-bottom: 1px solid #edc27b;
+   background: #000;
+  left: 0;
+    position: fixed;
+    right: 0;
+    top:0;
 }
 .jumbotron{
     background: transparent;
 }
 
+//raspberry imges
 .raspimg
 {
-    height: 150px;
-    width: 200px;
+    // margin-top: 30px;
+    height: 300px;
+    width: 350px;
+
 }
 
-.raspimg2{
-    height: 250px;
+// .raspimg2{
+//     height: 250px;
+//     z-index: 5000;
+// }
+//////////////////
+//mission////////
+.orbitlogo{
+    height: 400px;
+    width: 400px;
+    margin-top: 30px;
+    border: 1px solid #000;
+   box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.4);
 }
+.mission-p{
+    font-size: 20px;
+    margin-top: 40px;
+}
+//////////////////
 .heads{
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #1b2735 100%);
-    overflow: hidden;
-    height: 70%;
-    margin-top: -50px;
+    background: url("spacebg.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
+.title-list{
+   list-style-type: none;
+     font-size: 25px;
+     font-family: 'Permanent Marker', cursive;
+     text-shadow: 0 1px 1px #101010;
+}
+
+.title-list li{
+    display: inline;
+    padding: 5px;
+}
+
+
+//firstsectionhead
+
+.first-section-head h2{
+    font-size: 50px;
+    word-spacing: 2px;
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #edc27b;
+    content: ' ';
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+section{
+    padding: 80px;
+}
+//arrow
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.fa,
+.fa:hover{
+    color: #fff;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+///Stars animation below nothing else
 #stars {
 	content:"e";
   background: transparent;
@@ -143,7 +266,7 @@ nav{
   animation: animStar 150s linear infinite;
 }
 #stars3:after {
-  content: "e ";
+  content: "";
   position: absolute;
   top: 2000px;
   background: transparent;
