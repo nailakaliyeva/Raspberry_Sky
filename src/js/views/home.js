@@ -6,6 +6,7 @@ import Typed from "react-typed";
 import "../../styles/demo.scss";
 import { ScrollTo } from "react-scroll-to";
 import Fade from "react-reveal/Fade";
+import Rotate from "react-reveal/Rotate";
 
 export class Home extends React.Component {
 	render() {
@@ -35,7 +36,7 @@ export class Home extends React.Component {
 
 					<div className="arrow bounce">
 						<a
-							className="fa fa-arrow-down fa-3x"
+							className="fa fa-arrow-down fa-3x "
 							href="#"
 							onClick={() =>
 								window.scrollTo({
@@ -63,10 +64,10 @@ export class Home extends React.Component {
 						<div className="col mission-p">
 							<Fade right>
 								<p>
-									The mission to <b>low earth orbit</b> is to provide measurement data of the earths
-									magnetic field, atmospheric pressure, temperature and several other measurements. As
-									we progress, the <span>Raspberry sky </span> will be upgraded with higher grade
-									sensors and provide even more data. In the near future the{" "}
+									The mission to <b>low earth orbit</b> is to provide measurement data of the
+									earth&apos;s magnetic field, atmospheric pressure, temperature and several other
+									measurements. As we progress, the <span>Raspberry sky </span> will be upgraded with
+									higher grade sensors and provide even more data. In the near future the{" "}
 									<span>Raspberry sky </span> will be available for rent and will be outfitted with
 									cameras, an ambient light sensor, Geiger counter as well as several others such as a
 									{"  "}
@@ -95,11 +96,48 @@ export class Home extends React.Component {
 						<h2 className="text-white">Technology</h2>
 					</div>
 					<div className="row">
-						<div className="col">
-							<p className="text-white">Stuff</p>
+						<div className="col mission-p">
+							<Rotate top left>
+								<p className="text-white">
+									The <span> Raspberry Sky</span> was developed using in combination of a credit-card
+									sized computer known as a Raspberry Pi along with an attachment known as a sense
+									hat.
+									<ul>
+										<li>SoC: Broadcom BCM2837</li>
+										<li>CPU: 4× ARM Cortex-A53, 1.2GHz</li>
+										<li>GPU: Broadcom VideoCore IV</li>
+										<li>RAM: 1GB LPDDR2 (900 MHz)</li>
+										<li>Networking: 10/100 Ethernet, 2.4GHz 802.11n wireless</li>
+									</ul>
+								</p>
+							</Rotate>
 						</div>
 						<div className="col">
-							<img src="https://www.raspberrypi.org/learning/images/components/raspberry-pi.png" />
+							<Rotate top right>
+								<img src="https://www.raspberrypi.org/learning/images/components/raspberry-pi.png" />
+							</Rotate>
+						</div>
+						<div className="col pt-5">
+							<Rotate bottom left>
+								<img src="https://projects-static.raspberrypi.org/projects/getting-started-with-the-sense-hat/653ef80ded139ef3aa6e17c5f24936e6c9b63b6a/en/images/sense-hat.png" />
+							</Rotate>
+						</div>
+						<div className=" col mission-p text-white">
+							<Rotate bottom right>
+								<p>
+									The Sense hat has several sensors built-in this enables the{" "}
+									<span> Raspberry Sky </span> to relay the information measured via sense hat through
+									it&apos;s multiple sensors back to the user.
+									<ul>
+										<li>Gyroscope – angular rate sensor: +/-245/500/2000dps</li>
+										<li>Accelerometer - Linear acceleration sensor: +/-2/4/8/16 g</li>
+										<li>Magnetometer - Magnetic Sensor: +/- 4/8/12/16 gauss</li>
+										<li>Barometer: 260 – 1260 hPa absolute range</li>
+										<li>Temperature sensor</li>
+										<li>Humidity sensor</li>
+									</ul>
+								</p>
+							</Rotate>
 						</div>
 					</div>
 				</section>
