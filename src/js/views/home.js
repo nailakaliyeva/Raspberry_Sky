@@ -5,6 +5,7 @@ import { Context } from "../store/appContext";
 import Typed from "react-typed";
 import "../../styles/demo.scss";
 import { ScrollTo } from "react-scroll-to";
+import Fade from "react-reveal/Fade";
 
 export class Home extends React.Component {
 	render() {
@@ -52,37 +53,44 @@ export class Home extends React.Component {
 					</div>
 					<div className="row">
 						<div className="col">
-							<img
-								className="orbitlogo"
-								src="https://www.trzcacak.rs/myfile/full/251-2510350_satellites-space-orbit-orbiting-telecommunication-world-map.png"
-							/>
+							<Fade left>
+								<img
+									className="orbitlogo"
+									src="https://www.trzcacak.rs/myfile/full/251-2510350_satellites-space-orbit-orbiting-telecommunication-world-map.png"
+								/>
+							</Fade>
 						</div>
 						<div className="col mission-p">
-							<p>
-								The mission to <b>low earth orbit</b> is to provide measurement data of the earths
-								magnetic field, atmospheric pressure, temperature and several other measurements. As we
-								progress, the <span>Raspberry sky </span> will be upgraded with higher grade sensors and
-								provide even more data. In the near future the <span>Raspberry sky </span> will be
-								available for rent and will be outfitted with cameras, an ambient light sensor, Geiger
-								counter as well as several others such as a{"  "}
-								<Typed
-									strings={[
-										" Barometer..",
-										" Thermometer..",
-										" Gyroscope..",
-										" Magnetometer..",
-										" Accelerometer.."
-									]}
-									typeSpeed={75}
-									backSpeed={75}
-									backDelay={2}
-									loop
-									smartBackspace
-								/>
-							</p>
+							<Fade right>
+								<p>
+									The mission to <b>low earth orbit</b> is to provide measurement data of the earths
+									magnetic field, atmospheric pressure, temperature and several other measurements. As
+									we progress, the <span>Raspberry sky </span> will be upgraded with higher grade
+									sensors and provide even more data. In the near future the{" "}
+									<span>Raspberry sky </span> will be available for rent and will be outfitted with
+									cameras, an ambient light sensor, Geiger counter as well as several others such as a
+									{"  "}
+									<Typed
+										strings={[
+											" Barometer..",
+											" Thermometer..",
+											" Gyroscope..",
+											" Magnetometer..",
+											" Accelerometer.."
+										]}
+										typeSpeed={75}
+										backSpeed={75}
+										backDelay={2}
+										loop
+										smartBackspace
+									/>
+								</p>
+							</Fade>
 						</div>
 					</div>
 				</section>
+
+				<section />
 			</div>
 		);
 	}

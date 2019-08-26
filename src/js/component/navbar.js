@@ -37,7 +37,7 @@ export class Navbar extends React.Component {
 													behavior: "smooth"
 												})
 											}>
-											The Mission
+											Mission
 										</a>
 
 										{/*<Link to="/subscribe">
