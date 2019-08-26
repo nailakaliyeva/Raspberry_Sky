@@ -2,21 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import { ScrollTo } from "react-scroll-to";
+
 export class Navbar extends React.Component {
 	constructor() {
 		super();
 	}
+
 	render() {
-		window.onscroll = () => {
-			const nav = document.querySelector("nav");
-			if (this.scrollY <= 10) {
-				nav.classList.remove("navbar");
-				nav.classList.add("scroll");
-			} else {
-				nav.classList.remove("scroll");
-				nav.classList.add("navbar");
-			}
-		};
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
@@ -35,6 +28,18 @@ export class Navbar extends React.Component {
 									</Link>
 								) : (
 									<span>
+										<a
+											className="navbar-brand mb-0 h1"
+											id="mission"
+											onClick={() =>
+												window.scrollTo({
+													top: 780,
+													behavior: "smooth"
+												})
+											}>
+											The Mission
+										</a>
+
 										{/*<Link to="/subscribe">
 											<a className="navbar-brand mb-0 h1 mx-auto text-white">Subscriptions</a>
 										</Link>*/}
