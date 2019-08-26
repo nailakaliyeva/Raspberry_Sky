@@ -63,8 +63,8 @@ export class Home extends React.Component {
 								magnetic field, atmospheric pressure, temperature and several other measurements. As we
 								progress, the <span>Raspberry sky </span> will be upgraded with higher grade sensors and
 								provide even more data. In the near future the <span>Raspberry sky </span> will be
-								avaliable for rent and will be outfitted with cameras, an ambient light sensor, Geiger
-								countera as well as{" "}
+								available for rent and will be outfitted with cameras, an ambient light sensor, Geiger
+								counter as well as several others such as a{"  "}
 								<Typed
 									strings={[
 										" Barometer..",
