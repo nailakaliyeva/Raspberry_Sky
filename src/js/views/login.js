@@ -23,7 +23,7 @@ export class Login extends React.Component {
 							<div id="stars" />
 							<div id="stars2" />
 							<div id="stars3" />
-							<div className="container box mx-auto pt-3 mt-5 mb-5">
+							<div className="container box mx-auto pt-3 mt-2 mb-5">
 								<div className="text-center login">
 									<h2 className="pinkPart text-white">
 										Log

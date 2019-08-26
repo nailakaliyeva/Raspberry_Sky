@@ -1,6 +1,24 @@
 /*
     General Styles
 */
+
+
+#loading {
+		-webkit-animation: rotation 60s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+body{
+    background-color: black;
+}
 .parentForm{
     width: 60rem;
     height: 41rem;
@@ -116,7 +134,7 @@
     border-top: 4px solid #edc27b;
     background: rgba(16, 16, 16, 0.4);
     left: 0;
-    position: fixed;
+    position: sticky;
     right: 0;
     top:0;
 

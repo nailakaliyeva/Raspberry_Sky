@@ -32,7 +32,7 @@ export class Signup extends React.Component {
 							<div id="stars" />
 							<div id="stars2" />
 							<div id="stars3" />
-							<div className="container m-5  parentForm mx-auto">
+							<div className="container m-2  parentForm mx-auto">
 								<div className="text-center login">
 									<h2 className="pinkPart text-white">
 										Sign

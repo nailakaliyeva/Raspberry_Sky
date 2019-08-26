@@ -14,7 +14,7 @@ export class Navbar extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<nav className="navbar navbar-light mb-3">
+						<nav className="navbar navbar-light ">
 							<Link to="/home">
 								<i className="fas fa-project-diagram fa-2x text-white icons" />
 								<a className="navbar-brand mb-0 h1 title-name">
