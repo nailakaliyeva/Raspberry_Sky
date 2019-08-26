@@ -23,6 +23,7 @@ export class Home extends React.Component {
 
 							<img
 								className="raspimg"
+								id="loading"
 								src={"https://i.pinimg.com/originals/e0/4b/36/e04b36d9ae2dce5cef8cc9698ba9abea.png"}
 							/>
 
