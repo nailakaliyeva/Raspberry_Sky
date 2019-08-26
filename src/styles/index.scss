@@ -3,22 +3,9 @@
 */
 
 
-#loading {
-		-webkit-animation: rotation 60s infinite linear;
-}
-
-@-webkit-keyframes rotation {
-		from {
-				-webkit-transform: rotate(0deg);
-		}
-		to {
-				-webkit-transform: rotate(359deg);
-		}
-}
-
-body{
-    background-color: black;
-}
+// body{
+//     background-color: black;
+// }
 .parentForm{
     width: 60rem;
     height: 41rem;
@@ -134,7 +121,7 @@ body{
     border-top: 4px solid #edc27b;
     background: rgba(16, 16, 16, 0.4);
     left: 0;
-    position: sticky;
+    position: fixed;
     right: 0;
     top:0;
 
@@ -181,7 +168,6 @@ body{
     font-size: 20px;
     margin-top: 40px;
     line-height: 50px;
-
 }
 .mission-p span{
     font-family: 'Permanent Marker', cursive;
@@ -223,6 +209,7 @@ body{
     font-family: 'Permanent Marker', cursive;
 }
 
+
 h2:after {
     display: block;
     height: 2px;
@@ -235,6 +222,7 @@ h2:after {
 }
 section{
     padding: 80px;
+    background: #fff;
 }
 
 .midsection{
