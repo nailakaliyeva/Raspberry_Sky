@@ -35,8 +35,8 @@ export class Signup extends React.Component {
 							<div className="container m-5  parentForm mx-auto">
 								<div className="text-center login">
 									<h2 className="pinkPart text-white">
-										Log
-										<span className="pinkPart">In</span>
+										Sign
+										<span className="pinkPart">Up</span>
 									</h2>
 								</div>
 								<div className="form-row">
