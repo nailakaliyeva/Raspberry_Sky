@@ -194,7 +194,8 @@
 
 //firstsectionhead
 
-.first-section-head h2{
+.first-section-head h2,
+.second-section-head h2{
     font-size: 50px;
     word-spacing: 2px;
     text-align: center;
@@ -215,6 +216,10 @@ h2:after {
 }
 section{
     padding: 80px;
+}
+
+.midsection{
+    background: #000;
 }
 //arrow
 .arrow {

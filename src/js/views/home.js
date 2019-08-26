@@ -90,7 +90,19 @@ export class Home extends React.Component {
 					</div>
 				</section>
 
-				<section />
+				<section className="midsection">
+					<div className="second-section-head">
+						<h2 className="text-white">Technology</h2>
+					</div>
+					<div className="row">
+						<div className="col">
+							<p className="text-white">Stuff</p>
+						</div>
+						<div className="col">
+							<img src="https://www.raspberrypi.org/learning/images/components/raspberry-pi.png" />
+						</div>
+					</div>
+				</section>
 			</div>
 		);
 	}
