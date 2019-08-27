@@ -60,7 +60,7 @@ export class Login extends React.Component {
 								<div className="text-center m-auto">
 									<button
 										onClick={() => {
-											actions.login(this.state.email, this.state.password, this.props);
+											actions.addUser(this.state.email, this.state.password, this.props);
 										}}
 										type="submit"
 										className="btn btn-info btn-lg loginBtn">

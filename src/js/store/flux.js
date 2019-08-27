@@ -63,14 +63,17 @@ const getState = ({ getStore, setStore }) => {
 			addUser: (obj, props) => {
 				// let store = getStore();
 				// setStore({ users: store.users.concat(obj) });
-				fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/user", {
+				// const url = "https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/user";
+				const url = "http://127.0.0.1:3000/user";
+				fetch(url, {
 					method: "post",
 					headers: {
-						"Content-Type": "application/json"
+						"Content-Type": "application/json",
+						mode: "no-cors"
 					},
 					body: JSON.stringify(obj)
 				});
-				props.history.push("/login");
+				// props.history.push("/login");
 			},
 			login: (username, password, props) => {
 				fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/login", {
