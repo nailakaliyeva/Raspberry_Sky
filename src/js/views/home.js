@@ -66,11 +66,11 @@ export class Home extends React.Component {
 								<p>
 									The mission to launch a miniature <b>low earth orbit</b> is to provide measurement
 									data of the earth&apos;s magnetic field, atmospheric pressure, temperature and
-									several other measurements at an afforble price As we progress, the{" "}
-									<span>Raspberry sky </span> will be upgraded with higher grade sensors and provide
-									even more data. In the near future the <span>Raspberry sky </span> will be available
-									for rent and will be outfitted with cameras, an ambient light sensor, Geiger counter
-									as well as several others such as a{"  "}
+									several other measurements at an afforble price that anyone could afford. As we
+									progress, the <span>Raspberry sky </span> will be upgraded with higher grade sensors
+									and provide even more data. In the near future the <span>Raspberry sky </span> will
+									be available for rent and will be outfitted with cameras, an ambient light sensor,
+									Geiger counter as well as several others such as a{"  "}
 									<Typed
 										strings={[
 											" Barometer..",
