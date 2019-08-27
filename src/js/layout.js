@@ -5,9 +5,7 @@ import { Profile } from "./views/profile";
 import { Home } from "./views/home";
 import { Plans } from "./views/plans";
 import { Login } from "./views/login";
-import { Platinum } from "./views/platinum";
-import { Silver } from "./views/silver";
-import { Gold } from "./views/gold";
+
 import { SinglePlanPage } from "./views/singlePlanPage";
 import { Signup } from "./views/signup";
 import injectContext from "./store/appContext";
@@ -31,11 +29,9 @@ export class Layout extends React.Component {
 							<Route path="/home" component={Home} />
 							<Route path="/subscribe" component={Plans} />
 							<Route path="/login" component={Login} />
-							<Route path="/platinum" component={Platinum} />
-							<Route path="/silver" component={Silver} />
-							<Route path="/gold" component={Gold} />
+
 							<Route path="/signup" component={Signup} />
-							<Route path="/plan/:planName" component={SinglePlanPage} />
+							<Route path="/plan/:planName/:planId" component={SinglePlanPage} />
 							<Route render={() => <h1>Not found!</h1>} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

@@ -25,9 +25,11 @@ export class Plans extends React.Component {
 											<div className="card-body">
 												<h5 className="card-title">Card title</h5>
 												<p className="card-text">{item.description}</p>
-												<button type="button" className="btn btn-info">
-													Details
-												</button>
+												<Link to={"/plan/" + item.plan_name + "/" + index}>
+													<button type="button" className="btn btn-info">
+														Details
+													</button>
+												</Link>
 											</div>
 										</div>
 									);
