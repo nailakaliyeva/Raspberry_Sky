@@ -45,6 +45,11 @@ export class Profile extends React.Component {
 						<tbody>
 							<Context.Consumer>
 								{({ store, actions }) => {
+									let d = new Date();
+									let da = d.getFullYear();
+									let m = d.getMonth();
+									let day = d.getDate();
+									let dateOfRetrieving = m + 1 + "/" + day + "/" + da;
 									return (
 										store.sessions &&
 										store.sessions.map((item, index) => {
@@ -59,7 +64,7 @@ export class Profile extends React.Component {
 													</td>
 													<td className="text-left">
 														<br />
-														{item.date}
+														{dateOfRetrieving}
 													</td>
 													<td className="text-left">
 														<br />
