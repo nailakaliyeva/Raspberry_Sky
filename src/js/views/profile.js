@@ -8,7 +8,7 @@ import "../../styles/demo.scss";
 export class Profile extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container mt-5">
 				<div className="d-flex justify-content-between mt-5">
 					<h1 className="text-center text-danger">Status Page</h1>
 					<button type="button" className="btn btn-danger">

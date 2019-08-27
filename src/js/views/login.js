@@ -19,7 +19,7 @@ export class Login extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<div className="">
+						<div className="mt-5">
 							<div id="stars" />
 							<div id="stars2" />
 							<div id="stars3" />
