@@ -50,6 +50,13 @@ export class Profile extends React.Component {
 									let m = d.getMonth();
 									let day = d.getDate();
 									let dateOfRetrieving = m + 1 + "/" + day + "/" + da;
+									let time = new Date();
+									let hours = time.getHours();
+									let mins = time.getUTCMinutes();
+									if (mins < 10) {
+										mins = "0" + mins;
+									}
+
 									return (
 										store.sessions &&
 										store.sessions.map((item, index) => {
@@ -68,7 +75,7 @@ export class Profile extends React.Component {
 													</td>
 													<td className="text-left">
 														<br />
-														{item.time}
+														{hours + ":" + mins}
 													</td>
 													<td className="text-left">
 														x axis : {item.x_axis} µT
