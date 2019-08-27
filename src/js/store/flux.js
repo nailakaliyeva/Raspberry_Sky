@@ -2,7 +2,23 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			token: null,
-			products: [],
+			products: [
+				{
+					id: 1,
+					plan_name: "Platinum",
+					price: 99
+				},
+				{
+					id: 2,
+					plan_name: "Silver",
+					price: 49
+				},
+				{
+					id: 3,
+					plan_name: "Gold",
+					price: 79
+				}
+			],
 			sessions: [
 				{
 					pitch: 2,

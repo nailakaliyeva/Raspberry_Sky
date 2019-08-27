@@ -33,17 +33,18 @@ const injectContext = PassedComponent => {
 						}
 					});
 				});
-			fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/products")
-				.then(response => response.json())
-				.then(data => {
-					let store = this.state.store;
-					this.setState({
-						store: {
-							...store,
-							products: data.reverse()
-						}
-					});
-				});
+			// fetch("http://127.0.0.1:3000/products")
+			// 	.then(response => response.json())
+			// 	.then(data => {
+			// 		let store = this.state.store;
+			// 		this.setState({
+			// 			store: {
+			// 				...store,
+			// 				products: data.reverse()
+			// 			}
+			// 		});
+			// 	});
+
 			/**
 			 * EDIT THIS!
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime

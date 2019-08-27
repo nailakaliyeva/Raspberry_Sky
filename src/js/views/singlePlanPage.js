@@ -36,8 +36,7 @@ export class SinglePlanPage extends React.Component {
 								<div className="col-6 mx-auto">
 									<div className="card mt-5">
 										<h2 className="text-center">
-											{/*{item.plan_name}*/}
-											name
+											{store.products[this.props.match.params.planId].plan_name}
 										</h2>
 										<img
 											src="http://lorempixel.com/output/sports-q-c-640-480-3.jpg"
@@ -62,6 +61,7 @@ export class SinglePlanPage extends React.Component {
 									</div>
 								</div>
 							</div>
+							<img src="https://2slick.com/web/wp-content/themes/smartit/admin/extensions/timthumb.php?src=https%3A%2F%2F2slick.com%2Fweb%2Fwp-content%2Fuploads%2F2012%2F12%2Fpaypal_845x563.jpg&w=845" />
 						</div>
 					);
 					//});
@@ -71,5 +71,6 @@ export class SinglePlanPage extends React.Component {
 	}
 }
 SinglePlanPage.propTypes = {
-	history: PropTypes.object
+	history: PropTypes.object,
+	match: PropTypes.object
 };
