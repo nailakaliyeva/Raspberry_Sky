@@ -17,7 +17,7 @@ export class Home extends React.Component {
 						<div className="container text-center">
 							<h1 className="display-4 text-white justify-content-center head-title mb-3">
 								<span className="alii">{"<"}</span>
-								{"Developed to Measure and Relay"}
+								{"Satellite access for everyone"}
 								<span className="alii">{"/>"}</span>
 							</h1>
 
@@ -64,13 +64,13 @@ export class Home extends React.Component {
 						<div className="col mission-p">
 							<Fade right>
 								<p>
-									The mission to <b>low earth orbit</b> is to provide measurement data of the
-									earth&apos;s magnetic field, atmospheric pressure, temperature and several other
-									measurements. As we progress, the <span>Raspberry sky </span> will be upgraded with
-									higher grade sensors and provide even more data. In the near future the{" "}
-									<span>Raspberry sky </span> will be available for rent and will be outfitted with
-									cameras, an ambient light sensor, Geiger counter as well as several others such as a
-									{"  "}
+									The mission to launch a miniature <b>low earth orbit</b> is to provide measurement
+									data of the earth&apos;s magnetic field, atmospheric pressure, temperature and
+									several other measurements at an afforble price As we progress, the{" "}
+									<span>Raspberry sky </span> will be upgraded with higher grade sensors and provide
+									even more data. In the near future the <span>Raspberry sky </span> will be available
+									for rent and will be outfitted with cameras, an ambient light sensor, Geiger counter
+									as well as several others such as a{"  "}
 									<Typed
 										strings={[
 											" Barometer..",
@@ -141,15 +141,23 @@ export class Home extends React.Component {
 						</div>
 					</div>
 				</section>
+
+				<section>
+					<div className="first-section-head">
+						<h2 className="">Plans</h2>
+					</div>
+					<div>
+						<Plans />
+					</div>
+				</section>
+				<p>
+					<Link to="/subscribe">
+						<a className="navbar-brand mb-0 h1 ">
+							<h3 className="m-3">Click here to choose your subscription plan</h3>
+						</a>
+					</Link>
+				</p>
 			</div>
 		);
 	}
 }
-
-<p>
-	<Link to="/subscribe">
-		<a className="navbar-brand mb-0 h1 ">
-			<h3 className="m-3">Click here to choose your subscription plan</h3>
-		</a>
-	</Link>
-</p>;
