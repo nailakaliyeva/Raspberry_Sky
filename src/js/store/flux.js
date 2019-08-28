@@ -2,6 +2,7 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			token: null,
+			platinum: [],
 			products: [
 				{
 					id: 1,
@@ -74,6 +75,9 @@ const getState = ({ getStore, setStore }) => {
 					body: JSON.stringify(obj)
 				});
 				// props.history.push("/login");
+			},
+			retrieveData: () => {
+				fetch("http://127.0.0.1:3000/data").then(data => setStore({ platinum: data }));
 			},
 			login: (username, password, props) => {
 				fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/login", {
