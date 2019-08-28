@@ -76,8 +76,19 @@ const getState = ({ getStore, setStore }) => {
 				});
 				// props.history.push("/login");
 			},
-			retrieveData: () => {
-				fetch("http://127.0.0.1:3000/data").then(data => setStore({ platinum: data }));
+			// retrieveData: () => {
+			// 	fetch("https://api.github.com/users/plucodev")
+			// 		.then(response => response.json())
+
+			// 		.then(data => setStore({ platinum: data }));
+			// },
+			data: () => {
+				console.log("data");
+				fetch("http://127.0.0.1:3000/user")
+					.then(response => response.json())
+					.then(data => {
+						setStore({ test: data });
+					});
 			},
 			login: (username, password, props) => {
 				fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/login", {

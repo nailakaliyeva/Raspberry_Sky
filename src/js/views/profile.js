@@ -11,12 +11,15 @@ export class Profile extends React.Component {
 			<div className="container mt-5">
 				<div className="d-flex justify-content-between mt-5">
 					<h1 className="text-center text-danger">Status Page</h1>
-                    <Context.Consumer>
-                    {({store, actions})=> {
-					<button onClick ={()=>actions.retrieveData} type="button" className="btn btn-danger">
-						Retrieve data
-					</button>}}
-                    </Context.Consumer>
+					<Context.Consumer>
+						{({ store, actions }) => {
+							return (
+								<button onClick={() => actions.data()} type="button" className="btn btn-danger">
+									Retrieve data
+								</button>
+							);
+						}}
+					</Context.Consumer>
 				</div>
 				<ul className="list-group mt-3">
 					<table className="table table-dark">
