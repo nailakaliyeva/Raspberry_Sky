@@ -84,14 +84,14 @@ const getState = ({ getStore, setStore }) => {
 			// },
 			data: () => {
 				console.log("data");
-				fetch("http://127.0.0.1:3000/user")
+				fetch("http://127.0.0.1:3000/data")
 					.then(response => response.json())
 					.then(data => {
-						setStore({ test: data });
+						setStore({ sessions: data });
 					});
 			},
 			login: (username, password, props) => {
-				fetch("https://3000-e5f0e93b-8751-423f-b4d5-c61f23dd7bb9.ws-us0.gitpod.io/login", {
+				fetch("http://127.0.0.1:3000/login", {
 					method: "post",
 					headers: {
 						"Content-Type": "application/json"
